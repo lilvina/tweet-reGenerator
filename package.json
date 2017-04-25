@@ -1,0 +1,35 @@
+{
+  "name": "tweet-reGenerator",
+  "version": "1.0.0",
+  "description": "# Tweet-reGenerator with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "babel --copy-files src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilvina/tweet-reGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilvina/tweet-reGenerator/issues"
+  },
+  "homepage": "https://github.com/lilvina/tweet-reGenerator#readme",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1"
+  }
+}
