@@ -43,7 +43,7 @@ function tweetIt() {
       allTweets.push(data[i].tweetText)
     }
     let arrayLength = allTweets.length
-    let index = Math.floor(Math.random() * arrayLength + 1)
+    let index = Math.floor((Math.random() * arrayLength) + 1)
     console.log('index: ', index)
     let tweet = {
       status: allTweets[index]
@@ -53,8 +53,10 @@ function tweetIt() {
 
     function getTweeted(err, data, response) {
       if(err) {
-        console.log("Something went wrong!")
+        console.log("Something went wrong!", err)
       } else {
+        // this may be where we need to bring in status again?? //
+        // something needs to happen here //
         console.log("It works!")
       }
     }
@@ -71,6 +73,8 @@ function addToDatabase(event) {
     console.log('tweet added to the database: ', message)
   }
 }
+
+setInterval(tweetIt, 1000 *20)
 
 router.get('/', function(request, response, next) {
   db.getAllTweets()
